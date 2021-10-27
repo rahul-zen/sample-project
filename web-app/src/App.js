@@ -1,8 +1,10 @@
+import React from "react";
+import { AppView } from "./components/AppView";
 
 function App() {
   return (
-    <div className="App">
-    Welcome
+    <div>
+      <AppView />
     </div>
   );
 }

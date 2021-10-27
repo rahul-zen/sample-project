@@ -1,0 +1,256 @@
+$section-one-img: url("../../assets/images/imageone.jpg");
+$primary-color: #ffffff;
+$button-color: #e50914;
+$btn-hover-color: #f40612;
+$layout-breakpoint-small: 550px;
+$layout-breakpoint-medium: 950px;
+$layout-breakpoint-large: 1450px;
+
+@mixin grid($align: none, $justify: none) {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font-style($color: $primary-color, $font-size: 16px) {
+  color: $color;
+  font-size: $font-size;
+}
+
+.section-one-background {
+  background-image: $section-one-img;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.section-one-wrapper {
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  // background: linear-gradient(rgb(8, 8, 8), rgb(8, 8, 8));
+}
+
+.netflix-logo {
+  height: 45px;
+  width: 167px;
+}
+
+.header-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-select {
+  width: 95px;
+  height: 36px;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1 px solid #aaa;
+  color: $primary-color;
+  font-size: 0.875rem;
+  border-radius: 2px;
+  text-align: left !important;
+}
+
+.sign-in-home {
+  width: 84px;
+  height: 34px;
+  cursor: pointer;
+  background-color: $button-color;
+  font-weight: 400;
+  font-size: 1rem;
+  color: $primary-color;
+  border: 0;
+  border-radius: 2px;
+}
+
+.section-one-body-wrapper {
+  @include grid($justify: center);
+  grid-template-rows: auto auto auto auto auto;
+  padding-top: 150px;
+}
+
+.text-wrapper {
+  text-align: center;
+}
+
+.font-type-h1 {
+  @include font-style($font-size: 64px);
+  line-height: 1.1;
+}
+
+.font-type-h2 {
+  @include font-style($font-size: 26px);
+  line-height: 2.5;
+}
+
+.font-type-h3 {
+  @include font-style($font-size: 19px);
+}
+
+.input-btn-wrapper {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+.email-input-home {
+  width: 500px;
+  height: 70px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  outline: none;
+  border: 0;
+}
+
+.btn-get-started {
+  height: 70px;
+  width: 246px;
+  background-color: $button-color;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: $primary-color;
+  font-size: 30px;
+  border: 0;
+  cursor: pointer;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.btn-get-started:hover {
+  background-color: $btn-hover-color !important;
+}
+
+@media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) {
+  .netflix-logo {
+    height: 36px;
+    width: 134px;
+  }
+
+  .btn-get-started {
+    font-size: 1.625rem;
+  }
+
+  .font-type-h1 {
+    @include font-style($font-size: 50px);
+  }
+
+  .email-input-home {
+    width: 400px;
+    height: 60px;
+  }
+
+  .btn-get-started {
+    height: 60px;
+    width: 214px;
+  }
+}
+
+@media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) {
+  .section-one-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .netflix-logo {
+    height: 32px;
+    width: 108px;
+  }
+
+  .font-type-h3 {
+    @include font-style($font-size: 18px);
+  }
+
+  .input-btn-wrapper {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
+
+  .email-input-home {
+    font-size: 16px;
+    height: 48px;
+  }
+
+  .btn-get-started-wrapper {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .btn-get-started {
+    height: 40px;
+    width: 131px;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: $layout-breakpoint-small) {
+  .section-one-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .netflix-logo {
+    height: 24px;
+    width: 88px;
+  }
+
+  .language-select {
+    height: 27px;
+  }
+
+  .sign-in-home {
+    height: 27px;
+    width: 61px;
+    font-size: 0.9rem;
+  }
+
+  .font-type-h1 {
+    @include font-style($font-size: 28px);
+  }
+
+  .font-type-h2 {
+    @include font-style($font-size: 18px);
+  }
+
+  .font-type-h3 {
+    @include font-style($font-size: 18px);
+  }
+
+  .input-btn-wrapper {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+    justify-content: center;
+  }
+
+  .email-input-home-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+
+  .email-input-home {
+    font-size: 14px;
+    height: 48px;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .btn-get-started-wrapper {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .btn-get-started {
+    height: 40px;
+    width: 131px;
+    font-size: 1rem;
+  }
+}
