@@ -1,53 +1,56 @@
-import React from "react";
 import { NETFLIX_LOGO } from "../../assets/images";
 import "./home.scss";
 
 export const SectionOne = () => {
   return (
-    <div class="section-one-background">
-      <div class="section-one-wrapper">
-        <div class="header-wrapper">
+    <div className="section-one-background">
+      <div className="section-one-wrapper">
+        <div className="header-wrapper">
           <div>
-            <img src={NETFLIX_LOGO} alt="NETFLIX LOGO" class="netflix-logo" />
+            <img
+              src={NETFLIX_LOGO}
+              alt="NETFLIX LOGO"
+              className="netflix-logo"
+            />
           </div>
-          <div class="header-wrapper">
+          <div className="header-wrapper">
             <div>
               {/* <img src={GLOBE} alt="Globe" /> */}
-              <select name="language" id="language" class="language-select">
-                <option class="text-wrapper" value="english">
+              <select name="language" id="language" className="language-select">
+                <option className="text-wrapper" value="english">
                   English
                 </option>
-                <option class="text-wrapper" value="hindi">
+                <option className="text-wrapper" value="hindi">
                   हिन्दी
                 </option>
               </select>
             </div>
             <div style={{ paddingLeft: "25px" }}>
-              <button class="sign-in-home">Sign In</button>
+              <button className="sign-in-home">Sign In</button>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-one-body-wrapper">
-        <div class="font-type-h1  text-wrapper">Unlimited movies, TV</div>
-        <div class="font-type-h1 text-wrapper">shows and more.</div>
-        <div class="font-type-h2  text-wrapper">
+      <div className="section-one-body-wrapper">
+        <div className="font-type-h1  text-wrapper">Unlimited movies, TV</div>
+        <div className="font-type-h1 text-wrapper">shows and more.</div>
+        <div className="font-type-h2  text-wrapper">
           Watch anywhere. Cancel anytime.
         </div>
-        <div class="font-type-h3 text-wrapper">
+        <div className="font-type-h3 text-wrapper">
           Ready to watch? Enter your email to create or restart your membership.
         </div>
-        <div class="input-btn-wrapper">
-          <div class="email-input-home-wrapper">
+        <div className="input-btn-wrapper">
+          <div className="email-input-home-wrapper">
             <input
               type="email"
               placeholder="Email address"
-              class="email-input-home"
+              className="email-input-home"
             />
           </div>
 
-          <div class="btn-get-started-wrapper">
-            <button class="btn-get-started ">Get Started</button>
+          <div className="btn-get-started-wrapper">
+            <button className="btn-get-started ">Get Started</button>
           </div>
         </div>
       </div>

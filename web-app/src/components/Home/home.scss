@@ -122,10 +122,9 @@ $layout-breakpoint-large: 1450px;
   cursor: pointer;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
-}
-
-.btn-get-started:hover {
-  background-color: $btn-hover-color !important;
+  &:hover {
+    background-color: $btn-hover-color !important;
+  }
 }
 
 @media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) {
@@ -227,20 +226,16 @@ $layout-breakpoint-large: 1450px;
   .input-btn-wrapper {
     grid-template-columns: none;
     grid-template-rows: auto auto;
-    justify-content: center;
   }
 
   .email-input-home-wrapper {
-    display: grid;
-    grid-template-columns: 100%;
-    width: 100%;
+    text-align: center;
   }
 
   .email-input-home {
     font-size: 14px;
     height: 48px;
-    width: 100%;
-    min-width: 100%;
+    width: calc(100% - 60px);
   }
 
   .btn-get-started-wrapper {

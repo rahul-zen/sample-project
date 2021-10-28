@@ -1,5 +1,4 @@
-import React from "react";
-// import { Grid } from "@mui/material";
+/* eslint-disable react/prop-types */
 import { AppBody } from "./AppBody";
 import { AppFooter } from "./AppFooter";
 

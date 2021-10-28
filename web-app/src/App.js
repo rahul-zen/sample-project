@@ -1,4 +1,3 @@
-import React from "react";
 import { AppView } from "./components/AppView";
 
 function App() {
